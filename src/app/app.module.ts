@@ -8,6 +8,7 @@ import { NvbarComponent } from './home/nvbar/nvbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import {RouterModule, Routes} from '@angular/router';
+import {ReactiveFormsModule} from "@angular/forms";
 
 
 const appRoutes: Routes = [
@@ -28,12 +29,13 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
   ],
-  imports: [
-    BrowserModule,
-    RouterModule,
-    RouterModule.forRoot(appRoutes)
-  ],
+    imports: [
+        BrowserModule,
+        RouterModule,
+        RouterModule.forRoot(appRoutes),
+        ReactiveFormsModule
+    ],
   providers: [],
-  bootstrap: [HomeComponent]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

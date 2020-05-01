@@ -1,26 +1,18 @@
-#uname{
-font-size: 40px;
-  font-weight: bolder;
-
-}
-#unam{
-  font-size: 30px;
-  width: 600PX;
-  float: left;
-}
-#unname{
-height: 70px;
-  font-size: 30px;
-    }
-#unamee{
-  font-size: 30px;
-  float: left;
+.add-post-content{
+  padding-top: 20px;
 }
 
-#myFile{
-  height: 70px;
-  font-size: 30px;
+.new-post-title{
+  color: royalblue;
+  text-align: center;
 }
 
+.post-content, .post-title{
+  color: royalblue;
+}
 
+#hiho{
+
+  border-radius: 10%;
+}
 

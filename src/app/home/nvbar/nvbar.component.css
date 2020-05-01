@@ -75,17 +75,20 @@ p {
   align-items: center;
   position: fixed;
   top: 0;
-  height: 80px;
-  background-color: black;
+  z-index: 1;
+  height: 70px;
+  background-color: #49beff;
 }
 
 .logo a{
+  text-decoration: none;
   font-family: 'Allura', cursive;
-  font-size: 32px;
-  color: #26fbec;
+  font-size: 40px;
+  color: #e3f1ff;
 }
 
 .navbar .navbar_items ul{
+  margin-top: 10px;
   display: flex;
 }
 
@@ -97,4 +100,15 @@ p {
 
 .navbar .navbar_items ul li a{
   color: #fff;
+  text-decoration: none;
 }
+.navbar .navbar_items ul li :hover{
+  color: #c2fd3d;
+  text-decoration: none;
+}
+
+
+
+
+
+

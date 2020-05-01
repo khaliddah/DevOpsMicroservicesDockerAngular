@@ -7,10 +7,10 @@ import {Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class RegisterService {
-  private url = 'http//:localhost:8090/';
+  private url = 'http://localhost:8090/api/auth';
   constructor( private httpClient: HttpClient) { }
   // @ts-ignore
   save( registerpaylod: Register): Observable<any> {
-    return this.httpClient.post(this.url + "signUp" , registerpaylod);
+    return this.httpClient.post(this.url + '/signup' , registerpaylod);
   }
 }

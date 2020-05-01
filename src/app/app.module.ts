@@ -11,14 +11,16 @@ import { FooterComponent } from './footer/footer.component';
 import { HttpClientModule} from '@angular/common/http';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
-
-
+import {Ng2Webstorage} from 'ngx-webstorage';
+import { RegisterSuccessComponent } from './register-success/register-success.component';
+import {EditorModule} from '@tinymce/tinymce-angular';
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
-  { path: 'Write', component: BlogComponent },
+  { path: 'addPost', component: BlogComponent },
   { path: 'blogs', component: LoginComponent},
+  { path: 'registerSuccess', component: RegisterSuccessComponent },
   { path: 'Get Started', component: RegisterComponent }
 ] ;
 
@@ -31,12 +33,15 @@ const appRoutes: Routes = [
     FooterComponent,
     LoginComponent,
     RegisterComponent,
+    RegisterSuccessComponent,
   ],
     imports: [
         BrowserModule,
+      EditorModule,
         RouterModule,
         RouterModule.forRoot(appRoutes),
         FormsModule,
+        Ng2Webstorage.forRoot(),
         HttpClientModule,
         ReactiveFormsModule
     ],

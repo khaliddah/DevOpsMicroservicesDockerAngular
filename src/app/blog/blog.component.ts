@@ -4,6 +4,8 @@ import {Blog} from '../controller/model/blog.model';
 import {BlogService} from '../controller/service/blog.service';
 import {Router} from '@angular/router';
 import {LoginComponent} from '../login/login.component';
+import {Register} from "../controller/model/register.model";
+import {RegisterComponent} from "../register/register.component";
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
@@ -12,7 +14,8 @@ import {LoginComponent} from '../login/login.component';
 export class BlogComponent implements OnInit {
   addPostForm: FormGroup;
   PostPayload: Blog;
-  loginform: LoginComponent;
+  register: Register;
+  registers: RegisterComponent;
   title = new FormControl('');
   body = new FormControl('');
   categorie = new FormControl('');

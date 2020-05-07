@@ -7,5 +7,4 @@ export class Register {
     password: String;
   // tslint:disable-next-line:ban-types
      confirmPassword: String;
-
 }

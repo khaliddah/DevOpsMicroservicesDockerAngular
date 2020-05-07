@@ -8,14 +8,19 @@
         <li><a href="#">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#services">services</a></li>
-        <li><a href="#contactus">contact</a></li>
-        <li><a href="#ourteam">our team</a></li>
         <li><a routerLink="/addPost" routerLinkActive="active"> Add Post</a></li>
+        <li><a href="#contactus">contact Us</a></li>
         <li><a routerLink="/blogs" routerLinkActive="active">Join us</a></li>
         <li><a routerLink="/Get Started" routerLinkActive="active">subsribe us</a></li>
+
+        <form class="form-inline " style="margin-left: 100px"  >
+          <input class="form-control" type="search" placeholder="Search" style="border-radius: 20px" aria-label="Search"  [(ngModel)]="post.title" (input)="search()">
+            <a type="submit"  href="/post/{{post.id}}" class="read-more btn btn-primary" style="border-radius: 20px;padding: 4px">Read More</a>
+
+        </form>
       </ul>
     </div>
   </div>
 
-  //http://farm4.staticflickr.com/3088/3156977955_031c06623f_b.jpg
 
+</div>

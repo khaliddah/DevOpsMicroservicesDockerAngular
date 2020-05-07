@@ -14,12 +14,16 @@ import { RegisterComponent } from './register/register.component';
 import {Ng2Webstorage} from 'ngx-webstorage';
 import { RegisterSuccessComponent } from './register-success/register-success.component';
 import {EditorModule} from '@tinymce/tinymce-angular';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { DisplayPostComponent } from './display-post/display-post.component';
+import {Ng2SearchPipeModule} from "ng2-search-filter";
 
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'addPost', component: BlogComponent },
   { path: 'blogs', component: LoginComponent},
+  {path: 'post/:id', component: DisplayPostComponent},
   { path: 'registerSuccess', component: RegisterSuccessComponent },
   { path: 'Get Started', component: RegisterComponent }
 ] ;
@@ -34,17 +38,20 @@ const appRoutes: Routes = [
     LoginComponent,
     RegisterComponent,
     RegisterSuccessComponent,
+    DisplayPostComponent,
   ],
-    imports: [
-        BrowserModule,
-      EditorModule,
-        RouterModule,
-        RouterModule.forRoot(appRoutes),
-        FormsModule,
-        Ng2Webstorage.forRoot(),
-        HttpClientModule,
-        ReactiveFormsModule
-    ],
+  imports: [
+    BrowserModule,
+    EditorModule,
+    RouterModule,
+    RouterModule.forRoot(appRoutes),
+    FormsModule,
+    Ng2Webstorage.forRoot(),
+    HttpClientModule,
+    ReactiveFormsModule,
+    NgxPaginationModule,
+    Ng2SearchPipeModule
+  ],
   providers: [],
   bootstrap: [AppComponent]
 })

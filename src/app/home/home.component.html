@@ -85,27 +85,25 @@
 </div>
 </div>
 
-<h3 id="h3" style="font-size:4em; color: #3b5998 ;font-family: 'Courgette', cursive;text-decoration: underline"> Posts Recents</h3>
+<h3 id="h3" style="font-size:4em; color: #3b5998 ;font-family: 'Courgette', cursive;text-decoration: underline"> Recent posts</h3>
 
-  <div class="container-fluid " id="Posts Recents">
+  <div class="container-fluid " >
 
-  <div class="row ">
-    <div class="blogpost col-sm-3" *ngFor="let post of posts|async | paginate: {itemsPerPage: 4,currentPage: pageActual}" >
+  <div class="row">
+    <div class=" col-sm-3" *ngFor="let post of posts|async | paginate: {itemsPerPage: 4,currentPage: pageActual}" >
       <div class="blog-card spring-fever">
         <div class="title-content">
-          <h3><a href="/post/{{post.id}}" class="blog-title"style="font-family: 'Courgette', cursive;font-size:1.5em">{{post.title}}</a></h3>
-          <i class="fab fa-facebook-f"></i>
+          <h3><a href="/post/{{post.id}}"  style="font-family: 'Courgette', cursive;font-size:1.5em">{{post.title}}</a></h3>
+          <i class="fa fa-user"></i>
           <p>{{post.username}}</p>
           <hr />
-          <div class="intro" style=" font-size:1em;font-family: 'Courgette', cursive;" >Categorie : {{post.categorie}}</div>
+          <div class="intro" style=" font-size:1.2em;font-family: 'Courgette', cursive;" ><span class="h">Categorie : </span>{{post.categorie}}</div>
         </div><!-- /.title-content -->
         <div class="card-info" >
-          <p  style="font-family: 'Courgette', cursive;font-size:1em;color: white" [innerHTML]="post.body"></p>
         </div><!-- /.card-info -->
-
         <div class="utility-info">
-          <div>
-            <a type="button" href="/post/{{post.id}}" class="read-more btn btn-primary">Read More</a>
+          <div >
+            <a type="button" href="/post/{{post.id}}"  class="read-more btn btn-primary">Read More</a>
           </div>
           <ul class="utility-list">
             <li class="comments">12</li>
@@ -119,12 +117,13 @@
   </div>
     <div class="container">
     <div class="row" style="margin-top: 100px">
-      <pagination-controls (pageChange)=" pageActual =$event" style="margin-top: 450px; margin-left: 500px"></pagination-controls>
+      <pagination-controls (pageChange)=" pageActual =$event" style=" margin-left: 500px"></pagination-controls>
     </div>
     </div>
   </div>
 
-    <div style="height: 100px;"> </div>
+    <div style="height: 50px;">
+    </div>
 
 <div class="contactus" id="contactus" style="background-color: #b7fbea">
     <h1 class="title" style="font-size:2.5em;
@@ -148,3 +147,4 @@
     <a href="#home"><img src="https://i.imgur.com/wre6n0O.png" alt="up_arrow"></a>
   </div>
 
+  </div>

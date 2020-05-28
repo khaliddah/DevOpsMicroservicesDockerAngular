@@ -3,19 +3,32 @@
     <div class="logo">
       <a href="#">Blogger</a>
     </div>
-    <div class="navbar_items lightGreen pullDown">
+    <div class="navbar_items lightGreen pullDown" *ngIf="!loginService.isAuthenticated()">
       <ul>
         <li><a href="#">home</a></li>
         <li><a href="#about">about</a></li>
         <li><a href="#services">services</a></li>
-        <li><a routerLink="/addPost" routerLinkActive="active"> Add Post</a></li>
         <li><a href="#contactus">contact Us</a></li>
-        <li><a routerLink="/blogs" routerLinkActive="active">Join us</a></li>
-        <li><a routerLink="/Get Started" routerLinkActive="active">subsribe us</a></li>
-
+        <li><a routerLink="/blogs" routerLinkActive="active" *ngIf="!loginService.isAuthenticated()">Join us</a></li>
+        <li><a routerLink="/Get Started" routerLinkActive="active" *ngIf="!loginService.isAuthenticated()">subsribe us</a></li>
         <form class="form-inline " style="margin-left: 100px"  >
-          <input class="form-control" type="search" placeholder="Search" style="border-radius: 20px" aria-label="Search"  [(ngModel)]="post.title" (input)="search()">
-            <a type="submit"  href="/post/{{post.id}}" class="read-more btn btn-primary" style="border-radius: 20px;padding: 4px">Read More</a>
+          <input class="form-control" type="search" placeholder="Search" style="border-radius: 20px; border: 2px solid blue" aria-label="Search"  >
+            <a type="submit"  href="" class=" btn btn-primary" style="border-radius: 20px;padding: 4px;width: 100px;margin-left: 10px;float: right;border-color: #2e344d">Search</a>
+        </form>
+      </ul>
+    </div>
+    <div class="navbar_items lightGreen pullDown" *ngIf="loginService.isAuthenticated()">
+      <ul>
+        <li><a href="#">home</a></li>
+        <li><a href="#about">about</a></li>
+        <li><a href="#services">services</a></li>
+        <li><a routerLink="/addPost" routerLinkActive="active" *ngIf="loginService.isAuthenticated()">  Add Post</a></li>
+        <li><a href="#contactus">contact Us</a></li>
+        <div style="width:50px"> </div>
+        <button class="btn-primary" class=" logout"><a (click)="loginService.logout()" *ngIf="loginService.isAuthenticated()">log Out </a></button>
+        <form class="form-inline " style="margin-left: 100px"  >
+          <input class="form-control" type="search" placeholder="Search" style="border-radius: 20px" aria-label="Search"  >
+          <a type="submit"  href="" class="read-more btn btn-primary" style="border-radius: 20px;padding: 4px">Read More</a>
 
         </form>
       </ul>

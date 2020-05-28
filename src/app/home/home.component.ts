@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {BlogService} from '../controller/service/blog.service';
 import {Observable} from 'rxjs';
 import {Blog} from '../controller/model/blog.model';
+import {LoginService} from "../controller/service/login.service";
 
 @Component({
   selector: 'app-home',
@@ -11,7 +12,7 @@ import {Blog} from '../controller/model/blog.model';
 export class HomeComponent implements OnInit {
 
 
-  constructor(private  blogService: BlogService) {
+  constructor(private  blogService: BlogService, private loginservice: LoginService) {
     }
   posts: Observable<Array<Blog>>;
 

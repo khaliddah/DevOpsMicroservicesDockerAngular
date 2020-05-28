@@ -93,10 +93,29 @@ p {
   display: flex;
 }
 
-
+.logout{
+ float: left;
+  padding: 3px 40px;
+  margin-top: 0px;
+background-color: #2b396e;
+  color: #e4fffa;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  border: 3px solid white;
+}
+.logout:hover{
+  float: left;
+  padding: 3px 40px;
+  margin-top: 0px;
+  color: #2b396e;
+  background-color: #e4fffa;
+  border-radius: 20px;
+  font-size: 1.2rem;
+  border: 3px solid #2b396e;
+}
 .navbar .navbar_items ul li{
   text-transform: uppercase;
-  margin: 0 10px;
+  margin: 5PX 10px;
 }
 
 .navbar .navbar_items ul li a{
@@ -107,7 +126,6 @@ p {
   color: #c2fd3d;
   text-decoration: none;
 }
-
 
 
 
